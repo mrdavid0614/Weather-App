@@ -11,11 +11,12 @@ import WeatherSidebar from './components/WeatherSidebar';
 function App() {
   const [ city, setCity ] = useState({ consolidated_weather: [] });
   const [ isLoading, setIsLoading ] = useState(false);
-  const [ error, setError ] = useState('');
+  const [ error, setError ] = useState('You should grant the use of your location.');
   const [ weatherMetrics, setWeatherMetrics ] = useState(localStorage.getItem('metrics') || 'C');
 
   useEffect(() => {
     const onSuccessPosition = async ({ coords }) => {
+      setError('')
       setIsLoading(true);
       const [ mostSimilarLocation ] = await (await (fetch(`${ baseUrl }/search/?lattlong=${ coords.latitude },${ coords.longitude }`))).json();
       const locationWeather = await (await (fetch(`${ baseUrl }/${ mostSimilarLocation.woeid }`))).json();
