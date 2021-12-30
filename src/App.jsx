@@ -32,15 +32,15 @@ function App() {
 
   return (
     <main
-      className={ //error
-                  //? `px-16 py-60 flex justify-center items-center text-slate-50`
-                  //: 
+      className={ error
+                  ? `px-16 py-60 flex justify-center items-center text-slate-50`
+                  : 
                   `flex flex-col md:flex-row h-full text-slate-50`
                 }>
         {
-          /*error
+          error
           ? <p className="text-2xl">{ error }</p>
-          :*/
+          :
           isLoading
             ? <Spinner />
             : <CityContext.Provider value={{ city, setCity, setIsLoading }} >
