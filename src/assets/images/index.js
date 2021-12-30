@@ -1,0 +1,10 @@
+export * as Clear from './Clear.png';
+export * as Hail from './Hail.png';
+export * as HeavyCloud from './HeavyCloud.png';
+export * as HeavyRain from './HeavyRain.png';
+export * as LightCloud from './LightCloud.png';
+export * as LightRain from './LightRain.png';
+export * as Showers from './Shower.png';
+export * as Snow from './Snow.png';
+export * as Thunder from './Thunderstorm.png';
+export * as Sleet from './Sleet.png';
